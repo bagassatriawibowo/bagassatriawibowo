@@ -92,7 +92,7 @@ zasdsadsa = pd.DataFrame({
     'Daftar Negara':negara_negara,
     'Produksi':sum_produksi
 })
-mid_col.st.table(zasdsadsa)
+st.table(zasdsadsa)
 ############### lower middle column ###############
 
 ############### lower right column ###############
@@ -121,4 +121,9 @@ ax.bar(negara_negara2, total_prod, color=warnawarna)
 plt.tight_layout()
 
 right_col.pyplot(figure)
+zasdsads = pd.DataFrame({
+    'Daftar Negara':negara_negara2,
+    'Produksi Kumulatif':total_prod
+})
+st.table(zasdsads)
 ############### lower right column ###############
