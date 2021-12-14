@@ -86,6 +86,12 @@ ax.bar(negara_negara, sum_produksi, color=warnawarna)
 plt.tight_layout()
 
 mid_col.pyplot(figure)
+
+zasdsadsa=pd.dataframe({
+    'Daftar Negara':negara_negara
+    'Jumlah Produksi':sum_produksi
+})
+
 ############### lower middle column ###############
 
 ############### lower right column ###############
