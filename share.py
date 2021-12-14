@@ -1,8 +1,10 @@
+import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib import cm
-import json
-import pandas as pd
 import streamlit as st
+from PIL import Image
+
 
 dataframe = pd.read_csv('produksi_minyak_mentah.csv')
 dataframe['produksi'] = pd.to_numeric(dataframe['produksi'])
@@ -31,7 +33,7 @@ st.title("Informasi Seputar Data Produksi Minyak Mentah dari Berbagai Negara di 
 #JUDUL
 
 ############### sidebar ###############
-image = Image.open('tj_logo.png')
+image = Image.open('begs_logo.png')
 st.sidebar.image(image)
 
 st.sidebar.title("Setelan")
