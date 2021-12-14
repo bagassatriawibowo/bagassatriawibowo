@@ -87,7 +87,7 @@ plt.tight_layout()
 
 mid_col.pyplot(figure)
 
-zasdsadsa=pd.dataframe({
+zasdsadsa=pd.Dataframe({
     'Daftar Negara':negara_negara,
     'Jumlah Produksi':sum_produksi
 })
