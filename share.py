@@ -92,6 +92,7 @@ zasdsadsa = pd.DataFrame({
     'Daftar Negara':negara_negara,
     'Produksi':sum_produksi
 })
+st.table(zasdsadsa)
 ############### lower middle column ###############
 
 ############### lower right column ###############
