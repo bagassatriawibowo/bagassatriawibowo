@@ -62,6 +62,11 @@ warnawarna = cimap.colors[:len(cntry)]
 ax.bar(unique_year, total_prod, color=warnawarna)
 
 left_col.pyplot(figure)
+zasdsad = pd.DataFrame({
+    'Tahun Unik':unique_year,
+    'Produksi minyak mentah':total_prod
+})
+st.table(zasdsad)
 ############### lower left column ###############
 
 ############### lower middle column ###############
