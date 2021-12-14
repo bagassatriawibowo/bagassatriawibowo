@@ -4,6 +4,7 @@ import json
 import pandas as pd
 import streamlit as st
 from PIL import Image
+import numpy as np
 
 dataframe = pd.read_csv('produksi_minyak_mentah.csv')
 dataframe['produksi'] = pd.to_numeric(dataframe['produksi'])
@@ -87,6 +88,10 @@ ax.bar(negara_negara, sum_produksi, color=warnawarna)
 plt.tight_layout()
 
 mid_col.pyplot(figure)
+zasdsadsa = pd.DataFrame({
+    'Daftar Negara':negara_negara,
+    'Produksi':sum_produksi
+})
 ############### lower middle column ###############
 
 ############### lower right column ###############
