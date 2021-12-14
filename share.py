@@ -56,7 +56,7 @@ for i in dataframe[dataframe['nama_negara']==negara]['produksi'] :
 fig, ax = plt.subplots()
 name_cmap = 'Pastel2'
 cimap = cm.get_cmap(name_cmap)
-warnawarna = cimap.warnawarna[:len(country)]
+warnawarna = cimap.warnawarna[:len(cntry)]
 ax.bar(unique_year, total_prod, color=warnawarna)
 
 left_col.pyplot(fig)
