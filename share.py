@@ -5,7 +5,6 @@ from matplotlib import cm
 import streamlit as st
 from PIL import Image
 
-
 dataframe = pd.read_csv('produksi_minyak_mentah.csv')
 dataframe['produksi'] = pd.to_numeric(dataframe['produksi'])
 jison_f = open("kode_negara_lengkap.json")
