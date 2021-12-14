@@ -31,8 +31,8 @@ st.title("Informasi Seputar Data Produksi Minyak Mentah dari Berbagai Negara di 
 #JUDUL
 
 ############### sidebar ###############
-#image = Image.open('begs.png')
-#st.sidebar.image(image)
+image = Image.open('begs.png')
+st.sidebar.image(image)
 
 st.sidebar.title("Setelan")
 left_col, mid_col, right_col = st.columns(3)
