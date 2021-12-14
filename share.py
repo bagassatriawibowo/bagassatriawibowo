@@ -14,8 +14,8 @@ for z in range (len(df.index)):
     x=0
     indikator = 0
     for k in data:
-        if df['kode_negara'][z] == data[k]['alpha-3'] :
-            name_country.append(data[k]['name'])
+        if df['kode_negara'][z] == data[x]['alpha-3'] :
+            name_country.append(data[x]['name'])
             indikator +=1
         x+=1
     if indikator == 0:
