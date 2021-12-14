@@ -51,7 +51,7 @@ left_col.subheader("Produksi Minyak Mentah Per Negara")
 
 total_prod=[]
 for s in dataframe[dataframe['nama_negara']==negara]['produksi'] :
-    total_prod.append(i)
+    total_prod.append(s)
 
 figure, ax = plt.subplots()
 name_cmap = 'Pastel2'
@@ -72,12 +72,12 @@ negara_negara=[]
 a=0
 for s in dataframe_2['produksi']:
     if a < n_country:
-        sum_produksi.append(i)
+        sum_produksi.append(s)
         a+=1
 a=0
 for s in dataframe_2['nama_negara']:
     if a < n_country:
-        negara_negara.append(i)
+        negara_negara.append(s)
         a+=1
 
 figure, ax = plt.subplots()
@@ -100,12 +100,12 @@ total_prod=[]
 b=0
 for s in dataframe_3['total_prod']:
     if b < n_country:
-        total_prod.append(i)
+        total_prod.append(s)
         b+=1
 b=0
 for s in dataframe_3['nama_negara']:
     if b < n_country:
-        negara_negara2.append(i)
+        negara_negara2.append(s)
         b+=1
 
 figure, ax = plt.subplots()
