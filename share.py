@@ -50,68 +50,68 @@ tahun = st.sidebar.selectbox ("Tahun", unique_year)
 left_col.subheader("Produksi Minyak Mentah Per Negara")
 
 total_prod=[]
-for i in dataframe[dataframe['nama_negara']==negara]['produksi'] :
+for s in dataframe[dataframe['nama_negara']==negara]['produksi'] :
     total_prod.append(i)
 
-fig, ax = plt.subplots()
+figure, ax = plt.subplots()
 name_cmap = 'Pastel2'
 cimap = cm.get_cmap(name_cmap)
 warnawarna = cimap.colors[:len(cntry)]
 ax.bar(unique_year, total_prod, color=warnawarna)
 
-left_col.pyplot(fig)
+left_col.pyplot(figure)
 ############### lower left column ###############
 
 ############### lower middle column ###############
 mid_col.subheader("Produksi Terbesar")
 
-df_2=dataframe.sort_values(by=['produksi'], ascending=False)
-df_2 = df_2.loc[df_2['tahun']==tahun]
-total_produksi = []
-list_negara=[]
+dataframe_2=dataframe.sort_values(by=['produksi'], ascending=False)
+dataframe_2 = dataframe_2.loc[dataframe_2['tahun']==tahun]
+sum_produksi = []
+negara_negara=[]
 a=0
-for i in df_2['produksi']:
+for s in dataframe_2['produksi']:
     if a < n_country:
-        total_produksi.append(i)
+        sum_produksi.append(i)
         a+=1
 a=0
-for i in df_2['nama_negara']:
+for s in dataframe_2['nama_negara']:
     if a < n_country:
-        list_negara.append(i)
+        negara_negara.append(i)
         a+=1
 
-fig, ax = plt.subplots()
-ax.bar(list_negara, total_produksi, color=warnawarna)
+figure, ax = plt.subplots()
+ax.bar(negara_negara, sum_produksi, color=warnawarna)
 
 plt.tight_layout()
 
-mid_col.pyplot(fig)
+mid_col.pyplot(figure)
 ############### lower middle column ###############
 
 ############### lower right column ###############
-right_col.subheader("---------------")
+right_col.subheader(" Produksi Terbesar secara Kumulatif Keseluruhan Tahun")
 
-df_3 = pd.DataFrame(dataframe, columns= ['nama_negara','produksi'])
-df_3['total_prod'] =  df_3.groupby(['nama_negara'])['produksi'].transform('sum')
-df_3 = df_3.drop_duplicates(subset=['nama_negara'])
-df_3=df_3.sort_values(by=['total_prod'], ascending=False)
-list_negara2=[]
+dataframe_3 = pd.DataFrame(dataframe, columns= ['nama_negara','produksi'])
+dataframe_3['total_prod'] =  dataframe_3.groupby(['nama_negara'])['produksi'].transform('sum')
+dataframe_3 = dataframe_3.drop_duplicates(subset=['nama_negara'])
+dataframe_3=dataframe_3.sort_values(by=['total_prod'], ascending=False)
+negara_negara2=[]
 total_prod=[]
-y=0
-for i in df_3['total_prod']:
-    if y < n_country:
+b=0
+for s in dataframe_3['total_prod']:
+    if b < n_country:
         total_prod.append(i)
-        y+=1
-y=0
-for i in df_3['nama_negara']:
-    if y < n_country:
-        list_negara2.append(i)
-        y+=1
+        b+=1
+b=0
+for s in dataframe_3['nama_negara']:
+    if b < n_country:
+        negara_negara2.append(i)
+        b+=1
 
-fig, ax = plt.subplots()
-ax.bar(list_negara2, total_prod, color=warnawarna)
+figure, ax = plt.subplots()
+ax.bar(negara_negara2, total_prod, color=warnawarna)
 
 plt.tight_layout()
 
-right_col.pyplot(fig)
+right_col.pyplot(figure)
 ############### lower right column ###############
