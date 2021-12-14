@@ -5,7 +5,14 @@ import pandas as pd
 import streamlit as st
 from PIL import Image
 import numpy as np
-
+[
+theme
+]
+primaryColor="#F63366"
+backgroundColor="#FFFFFF"
+secondaryBackgroundColor="#F0F2F6"
+textColor="#262730"
+font="sans serif"
 dataframe = pd.read_csv('produksi_minyak_mentah.csv')
 dataframe['produksi'] = pd.to_numeric(dataframe['produksi'])
 jison_f = open("kode_negara_lengkap.json")
