@@ -95,6 +95,8 @@ ax.invert_yaxis()  # labels read top-to-bottom
 plt.tight_layout()
 
 mid_col.pyplot(figure)
+
+mid_col.subheader("Tabel Jumlah Produksi Setiap Tahun")
 zasdsadsa = pd.DataFrame({
     'Daftar Negara':negara_negara,
     'Produksi':sum_produksi
