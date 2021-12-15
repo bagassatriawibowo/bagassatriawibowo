@@ -142,5 +142,5 @@ max_total_produksi = np.asarray(total_prod).max()
 max_total_produksi_idx = np.asarray(total_prod).argmax()
 max_produksi=np.asarray(sum_produksi).max()
 max_produksi_idx = np.asarray(sum_produksi).argmax()
-right_col.markdown(f"Negara dengan total produksi terbanyak adalah : {negara_negara2[max_total_produksi_idx]} ({max_total_produksi}) dan pada tahun {tahun} produksi terbanyaknya yakni sebesar:{negara_negara2[max_produksi_idx]} ({max_produksi})")
+right_col.markdown(f"Negara dengan total produksi terbanyak adalah : {negara_negara2[max_total_produksi_idx]} ({max_total_produksi}) dan pada tahun {tahun} produksi terbanyaknya yakni sebesar:{nama_negara[max_produksi_idx]} ({max_produksi})")
 
