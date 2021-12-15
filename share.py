@@ -62,7 +62,7 @@ warnawarna = cimap.colors[:len(cntry)]
 ax.bar(unique_year, total_prod, color=warnawarna)
 
 left_col.pyplot(figure)
-left_col.subheader("Tabel Produksi Minyak Mentah Setiap Negara")
+
 zasdsad = pd.DataFrame({
     'Tahun Unik':unique_year,
     'Produksi minyak mentah':total_prod
@@ -97,7 +97,6 @@ plt.tight_layout()
 
 mid_col.pyplot(figure)
 
-mid_col.subheader("Tabel Jumlah Produksi Setiap Tahun")
 zasdsadsa = pd.DataFrame({
     'Daftar Negara':negara_negara,
     'Produksi':sum_produksi
@@ -131,7 +130,7 @@ ax.bar(negara_negara2, total_prod, color=warnawarna)
 plt.tight_layout()
 
 right_col.pyplot(figure)
-right_col.subheader("Tabel Produksi Terbesar Setiap Negara secara Kumulatif Keseluruhan Tahun")
+
 zasdsads = pd.DataFrame({
     'Daftar Negara':negara_negara2,
     'Produksi Kumulatif':total_prod
