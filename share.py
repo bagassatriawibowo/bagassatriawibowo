@@ -140,5 +140,5 @@ st.table(zasdsads)
 right_col.subheader("Summary")
 max_produksi = np.asarray(total_prod).max()
 max_produksi_idx = np.asarray(total_prod).argmax()
-right_col.markdown(f"**Negara dengan total produksi terbanyak adalah {negara_negara2}: {nama_negara[max_produksi_idx]} ({max_produksi}) dengan produksi terbanyak pada tahun {tahun}:**\n {(sum_produksi)}")
+right_col.markdown(f"**Negara dengan total produksi terbanyak adalah : {negara_negara2[max_produksi_idx]} ({max_produksi}) dengan produksi terbanyak pada tahun {tahun}:**\n {(sum_produksi)}")
 
