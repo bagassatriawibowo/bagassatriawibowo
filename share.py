@@ -36,11 +36,11 @@ st.title("Informasi Seputar Data Produksi Minyak Mentah dari Berbagai Negara di 
 image = Image.open('Oildrop.png')
 st.sidebar.image(image)
 
-st.sidebar.title("Setelan")
+st.sidebar.title("Pengaturan")
 left_col, mid_col, right_col = st.columns(3)
 
 ## User inputs on the control panel
-st.sidebar.subheader("Setelan tampilan")
+st.sidebar.subheader("Pengaturan Konfigurasi Tampilan")
 cntry=list(dict.fromkeys(nama_negara))
 cntry.remove(0)
 negara = st.sidebar.selectbox("Pilihlah Negara", cntry)
