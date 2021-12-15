@@ -88,7 +88,9 @@ for s in dataframe_2['nama_negara']:
         a+=1
 
 figure, ax = plt.subplots()
-ax.bar(negara_negara, sum_produksi, color=warnawarna)
+ax.barh(negara_negara, sum_produksi, color=warnawarna)
+ax.set_yticklabels(negara_negara, rotation=0)
+ax.invert_yaxis()  # labels read top-to-bottom
 
 plt.tight_layout()
 
