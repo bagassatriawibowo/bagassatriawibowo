@@ -137,3 +137,8 @@ zasdsads = pd.DataFrame({
 })
 st.table(zasdsads)
 ############### lower right column ###############
+right_col.subheader("Summary")
+max_produksi = np.asarray(total_prod).max()
+max_produksi_idx = np.asarray(total_prod).argmax()
+right_col.markdown(f"**Negara dengan produksi terbanyak adalah {nama_negara}: ** \n {cntry[max_produksi_idx]} ({max_produksi})")
+
