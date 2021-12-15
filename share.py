@@ -68,6 +68,7 @@ zasdsad = pd.DataFrame({
     'Produksi minyak mentah':total_prod
 })
 st.table(zasdsad)
+left_col.dataframe(df.head(zasdsad))
 ############### lower left column ###############
 
 ############### lower middle column ###############
