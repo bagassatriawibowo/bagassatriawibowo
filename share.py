@@ -222,5 +222,5 @@ st.write(df_min)
 st.write('Info Produksi Zero Tahun ke-{}'.format(T_))
 st.write(df_zero[df_zero['tahun']==T_])
 
-st.write('Tabel Zero per Tahun')
+st.write('abel Zero per Tahun')
 st.write(df_zero)
