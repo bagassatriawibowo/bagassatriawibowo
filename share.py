@@ -138,6 +138,8 @@ zasdsads = pd.DataFrame({
 })
 right_col.dataframe(zasdsads)
 ############### lower right column ###############
+ch_ = csvHandler('produksi_minyak_mentah.csv')
+jh_ = jsonHandler('kode_negara_lengkap.json')
 st.write()
 st.write()
 st.header('Bagian D COKK')
