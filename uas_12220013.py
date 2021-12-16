@@ -148,7 +148,7 @@ left_col.subheader("SUMMARY")
 for x in range(len(det)):
     if negara == det[x]['name']:
         index_negara = x
-st.header('Informasi Negara yang Anda Pilih')
+middle.header('Informasi Negara yang Anda Pilih')
 st.write('Nama Lengkap Negara: %s' % (det[index_negara]['name']))
 st.write('Kode alpha-2: %s' % (det[index_negara]['alpha-2']))
 st.write('Kode alpha-3: %s' % (det[index_negara]['alpha-3']))
@@ -160,7 +160,7 @@ zasdsad = zasdsad.sort_values(by='Produksi minyak mentah', ascending=False)
 datanonzero = zasdsad.loc[zasdsad['Produksi minyak mentah'] > 0, 'Tahun Unik']
 dat_terbesar = datanonzero.values[0]
 dat_terkecil = datanonzero.values[len(datanonzero)-1]
-st.write(f'Produksi Terbesar Terjadi pada Tahun: {dat_terbesar}')
-st.write(f'Produksi Terkecil Terjadi pada Tahun: {dat_terkecil}')
+middle.write(f'Produksi Terbesar Terjadi pada Tahun: {dat_terbesar}')
+middle.write(f'Produksi Terkecil Terjadi pada Tahun: {dat_terkecil}')
 sum_data = zasdsad['Produksi minyak mentah'].sum()
-st.write(f'Produksi Kumulatif Keseluruhan Tahun dari Negara Ini yakni Sebesar: {sum_data:.2f}')
+middle.write(f'Produksi Kumulatif Keseluruhan Tahun dari Negara Ini yakni Sebesar: {sum_data:.2f}')
