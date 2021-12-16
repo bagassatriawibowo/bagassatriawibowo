@@ -172,7 +172,7 @@ for t in tahun:
 # maksimum
     kode_negara = df_per_tahun[df_per_tahun['produksi']==maks_prod]
 ['kode_negara'].tolist()[0]
-    if kode_negara == 'WLD':
+if kode_negara == 'WLD':
         kode_negara = 'WLF'
     dic_maks['negara'].append(dfJ[dfJ['alpha-3']==kode_negara]['name'].tolist()[0])
     dic_maks['kode_negara'].append(kode_negara)
@@ -183,7 +183,7 @@ for t in tahun:
     # minimum != 0
     kode_negara = df_per_tahun[df_per_tahun['produksi']==min_prod]
 ['kode_negara'].tolist()[0]
-    if kode_negara == 'WLD':
+if kode_negara == 'WLD':
         kode_negara = 'WLF'
     dic_min['negara'].append(dfJ[dfJ['alpha-3']==kode_negara]['name'].tolist()[0])
     dic_min['kode_negara'].append(kode_negara)
@@ -194,7 +194,7 @@ for t in tahun:
     # zero == 0
     kode_negara = df_per_tahun[df_per_tahun['produksi']==zero_prod]
 ['kode_negara'].tolist()[0]
-    if kode_negara == 'WLD':
+if kode_negara == 'WLD':
         kode_negara = 'WLF'
     dic_zero['negara'].append(dfJ[dfJ['alpha-3']==kode_negara]['name'].tolist()[0])
     dic_zero['kode_negara'].append(kode_negara)
