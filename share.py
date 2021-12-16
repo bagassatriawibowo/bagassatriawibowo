@@ -1,3 +1,6 @@
+############### UJIAN AKHIR SEMESTER ###############
+# Nama  : Bagas Satria Wibowo
+# NIM   : 12220013
 
 import matplotlib.pyplot as plt
 from matplotlib import cm
@@ -50,7 +53,7 @@ n_country = st.sidebar.number_input("Total Negara", min_value=1, max_value=None,
 unique_year = list(dataframe['tahun'].unique())
 tahun = st.sidebar.selectbox ("Tahun", unique_year)
 
-############### lower left column ###############
+###############  left column ###############
 left_col.subheader("Produksi Minyak Mentah Negara yang Dipilih")
 
 total_prod=[]
@@ -71,9 +74,9 @@ zasdsad = pd.DataFrame({
     'Produksi minyak mentah':total_prod
 })
 left_col.dataframe(zasdsad)
-############### lower left column ###############
+###############  left column ###############
 
-############### lower middle column ###############
+###############  middle column ###############
 mid_col.subheader("Produksi Terbesar")
 
 dataframe_2=dataframe.sort_values(by=['produksi'], ascending=False)
@@ -105,9 +108,9 @@ zasdsadsa = pd.DataFrame({
     'Produksi':sum_produksi
 })
 mid_col.dataframe(zasdsadsa)
-############### lower middle column ###############
+############### middle column ###############
 
-############### lower right column ###############
+###############  right column ###############
 right_col.subheader(" Produksi Terbesar secara Kumulatif Keseluruhan Tahun")
 
 dataframe_3 = pd.DataFrame(dataframe, columns= ['nama_negara','produksi'])
@@ -139,25 +142,26 @@ zasdsads = pd.DataFrame({
     'Produksi Kumulatif':total_prod
 })
 right_col.dataframe(zasdsads)
-############### lower right column ###############
+############### right column ###############
 
+right_col.subheader("Summary")
 for x in range(len(det)):
     if negara == det[x]['name']:
         index_negara = x
 
-st.header('Informasi Negara')
-st.write('Nama Negara: %s' % (det[index_negara]['name']))
+st.header('Informasi Negara yang Anda Pilih')
+st.write('Nama Lengkap Negara: %s' % (det[index_negara]['name']))
 st.write('Kode alpha-2: %s' % (det[index_negara]['alpha-2']))
 st.write('Kode alpha-3: %s' % (det[index_negara]['alpha-3']))
-st.write('Kode negara: %s' % (det[index_negara]['country-code']))
+st.write('Kode Negara: %s' % (det[index_negara]['country-code']))
 st.write('Region: %s' % (det[index_negara]['region']))
 st.write('Sub-Region: %s' % (det[index_negara]['sub-region']))
-st.header('Produksi Minyak Negara')
-zasdsad = zasdsad.sort_values(by='Produksi minyak mentah', ascending=False)
-datanonzero = zasdsad.loc[zasdsad['Produksi minyak mentah'] > 0, 'Tahun Unik']
+st.header('Informasi Produksi Minyak Negara yang Anda Pilih')
+zasdsad = zasdsad.sort_values(by='Besarnya Produksi Minyak mentah', ascending=False)
+datanonzero = zasdsad.loc[zasdsad['Besarnya Produksi Minyak mentah'] > 0, 'Tahun Unik']
 dat_terbesar = datanonzero.values[0]
 dat_terkecil = datanonzero.values[len(datanonzero)-1]
-st.write(f'Produksi terbesar pada tahun: {dat_terbesar}')
-st.write(f'Produksi terkecil pada tahun: {dat_terkecil}')
-sum_data = zasdsad['Produksi minyak mentah'].sum()
-st.write(f'Kumulatif: {sum_data:.2f}')
+st.write(f'Produksi Terbesar Terjadi pada Tahun: {dat_terbesar}')
+st.write(f'Produksi Terkecil Terjadi pada Tahun: {dat_terkecil}')
+sum_data = zasdsad['Besarnya Produksi Minyak Mentah'].sum()
+st.write(f'Produksi Kumulatif Keseluruhan Tahun dari Negara Ini yakni Sebesar: {sum_data:.2f}')
