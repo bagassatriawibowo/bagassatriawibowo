@@ -6,6 +6,7 @@ import pandas as pd
 import streamlit as st
 from PIL import Image
 import numpy as np
+import streamlit as st
 
 dataframe = pd.read_csv('produksi_minyak_mentah.csv')
 dataframe['produksi'] = pd.to_numeric(dataframe['produksi'])
@@ -34,6 +35,8 @@ st.title("Informasi Seputar Data Produksi Minyak Mentah dari Berbagai Negara di 
 #JUDUL
 
 ############### sidebar ###############
+image = Image.open('Oildrop.png')
+st.sidebar.image(image)
 
 st.sidebar.title("Pengaturan")
 left_col, mid_col, right_col = st.columns(3)
@@ -62,11 +65,12 @@ ax.bar(unique_year, total_prod, color=warnawarna)
 
 left_col.pyplot(figure)
 
+left_col.subheader("Tabel Data Produksi Minyak Mentah Negara yang Dipilih")
 zasdsad = pd.DataFrame({
     'Tahun Unik':unique_year,
     'Produksi minyak mentah':total_prod
 })
-st.table(zasdsad)
+left_col.dataframe(zasdsad)
 ############### lower left column ###############
 
 ############### lower middle column ###############
@@ -95,12 +99,12 @@ ax.invert_yaxis()  # labels read top-to-bottom
 plt.tight_layout()
 
 mid_col.pyplot(figure)
-
+mid_col.subheader("Tabel Data Produksi Minyak Terbesar")
 zasdsadsa = pd.DataFrame({
     'Daftar Negara':negara_negara,
     'Produksi':sum_produksi
 })
-st.table(zasdsadsa)
+mid_col.dataframe(zasdsadsa)
 ############### lower middle column ###############
 
 ############### lower right column ###############
@@ -116,7 +120,7 @@ b=0
 for s in dataframe_3['total_prod']:
     if b < n_country:
         total_prod.append(s)
-        b+=1
+        b+= 1
 b=0
 for s in dataframe_3['nama_negara']:
     if b < n_country:
@@ -129,19 +133,13 @@ ax.bar(negara_negara2, total_prod, color=warnawarna)
 plt.tight_layout()
 
 right_col.pyplot(figure)
-
+right_col.subheader("Tabel Data Produksi Kumulatif Minyak Terbesar")
 zasdsads = pd.DataFrame({
     'Daftar Negara':negara_negara2,
     'Produksi Kumulatif':total_prod
 })
-st.table(zasdsads)
+right_col.dataframe(zasdsads)
 ############### lower right column ###############
-right_col.subheader("Summary")
-max_total_produksi = np.asarray(total_prod).max()
-max_total_produksi_idx = np.asarray(total_prod).argmax()
-max_produksi=np.asarray(sum_produksi).max()
-max_produksi_idx = np.asarray(sum_produksi).argmax()
-right_col.markdown(f"Negara dengan total produksi terbanyak yakni : {negara_negara2[max_total_produksi_idx]} ({max_total_produksi}) dan pada tahun {tahun} produksi terbanyaknya yakni :{negara_negara[max_produksi_idx]} ({max_produksi})")
 
 for x in range(len(det)):
     if negara == det[x]['name']:
