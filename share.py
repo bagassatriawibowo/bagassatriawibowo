@@ -143,7 +143,7 @@ st.write()
 st.write()
 st.header('Bagian D COKK')
 T_ = st.sidebar.number_input("Summary Tahun Produksi", min_value=1971, max_value=2015)
-tahun = list(dict.fromkeys(df['tahun'].tolist()))
+tahun = list(dict.fromkeys(dataframe['tahun'].tolist()))
 dic_maks = {'negara':[],
             'kode_negara':[],
             'region':[],
