@@ -144,7 +144,7 @@ zasdsads = pd.DataFrame({
 right_col.dataframe(zasdsads)
 ############### right column ###############
 
-right_col.subheader("Summary")
+left_col.subheader("Summary")
 for x in range(len(det)):
     if negara == det[x]['name']:
         index_negara = x
@@ -157,8 +157,8 @@ st.write('Kode Negara: %s' % (det[index_negara]['country-code']))
 st.write('Region: %s' % (det[index_negara]['region']))
 st.write('Sub-Region: %s' % (det[index_negara]['sub-region']))
 st.header('Informasi Produksi Minyak Negara yang Anda Pilih')
-zasdsad = zasdsad.sort_values(by='Besarnya Produksi Minyak mentah', ascending=False)
-datanonzero = zasdsad.loc[zasdsad['Besarnya Produksi Minyak mentah'] > 0, 'Tahun Unik']
+zasdsad = zasdsad.sort_values(by='Besarnya Produksi Minyak Mentah', ascending=False)
+datanonzero = zasdsad.loc[zasdsad['Besarnya Produksi Minyak Mentah'] > 0, 'Tahun Unik']
 dat_terbesar = datanonzero.values[0]
 dat_terkecil = datanonzero.values[len(datanonzero)-1]
 st.write(f'Produksi Terbesar Terjadi pada Tahun: {dat_terbesar}')
