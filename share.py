@@ -131,7 +131,7 @@ ax.bar(negara_negara2, total_prod, color=warnawarna)
 plt.tight_layout()
 
 right_col.pyplot(figure)
-mid_col.subheader("Tabel Data Produksi Kumulatif Minyak Terbesar")
+right_col.subheader("Tabel Data Produksi Kumulatif Minyak Terbesar")
 zasdsads = pd.DataFrame({
     'Daftar Negara':negara_negara2,
     'Produksi Kumulatif':total_prod
