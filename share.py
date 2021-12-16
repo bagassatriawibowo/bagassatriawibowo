@@ -138,10 +138,4 @@ zasdsads = pd.DataFrame({
 })
 right_col.dataframe(zasdsads)
 ############### lower right column ###############
-left_col.subheader("Summary")
-max_total_produksi = np.asarray(total_prod).max()
-max_total_produksi_idx = np.asarray(total_prod).argmax()
-max_produksi=np.asarray(sum_produksi).max()
-max_produksi_idx = np.asarray(sum_produksi).argmax()
-left_col.markdown(f"Negara dengan total produksi terbanyak yakni : {negara_negara2[max_total_produksi_idx]} ({max_total_produksi}) dan pada tahun {tahun} produksi terbanyaknya yakni :{negara_negara[max_produksi_idx]} ({max_produksi})")
 
