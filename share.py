@@ -170,7 +170,7 @@ for t in tahun:
     min_prod = min([p for p in produksi if p != 0])
     zero_prod = min([p for p in produksi if p == 0])
 # maksimum
-    kode_negara = df_per_tahun[df_per_tahun['produksi']==maks_prod]
+kode_negara = df_per_tahun[df_per_tahun['produksi']==maks_prod]
 ['kode_negara'].tolist()[0]
 if kode_negara == 'WLD':
     kode_negara = 'WLF'
