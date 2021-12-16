@@ -180,7 +180,7 @@ dic_maks['kode_negara'].append(kode_negara)
 dic_maks['region'].append(jison_f[jison_f['alpha-3']==kode_negara]['region'].tolist()[0])
 dic_maks['sub_region'].append(jison_f[jison_f['alpha-3']==kode_negara]['sub-region'].tolist()
 [0])
-    dic_maks['produksi'].append(maks_prod)
+dic_maks['produksi'].append(maks_prod)
     # minimum != 0
     kode_negara = df_per_tahun[df_per_tahun['produksi']==min_prod]
 ['kode_negara'].tolist()[0]
