@@ -169,6 +169,7 @@ for t in tahun:
     maks_prod = max(produksi)
     min_prod = min([p for p in produksi if p != 0])
     zero_prod = min([p for p in produksi if p == 0])
+kode_negara = df[df['tahun']==T]['kode_negara'].tolist()
 # maksimum
 kode_negara = df_per_tahun[df_per_tahun['produksi']==maks_prod]
 ['kode_negara'].tolist()[0]
