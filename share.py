@@ -6,13 +6,9 @@ import streamlit as st
 from PIL import Image
 import numpy as np
 import streamlit as st
-from fileHandler import csvHandler,jsonHandler
-import numpy as np
-import pandas as pd
 from sklearn.linear_model import LinearRegression
 import plotly.graph_objects as go
 import plotly.express as px
-import matplotlib.pyplot as plt
 
 dataframe = pd.read_csv('produksi_minyak_mentah.csv')
 dataframe['produksi'] = pd.to_numeric(dataframe['produksi'])
