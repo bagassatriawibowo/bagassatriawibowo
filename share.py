@@ -117,7 +117,7 @@ b=0
 for s in dataframe_3['total_prod']:
     if b < n_country:
         total_prod.append(s)
-        b+=1
+        b+= 1
 b=0
 for s in dataframe_3['nama_negara']:
     if b < n_country:
