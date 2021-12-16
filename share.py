@@ -5,6 +5,14 @@ import pandas as pd
 import streamlit as st
 from PIL import Image
 import numpy as np
+import streamlit as st
+from fileHandler import csvHandler,jsonHandler
+import numpy as np
+import pandas as pd
+from sklearn.linear_model import LinearRegression
+import plotly.graph_objects as go
+import plotly.express as px
+import matplotlib.pyplot as plt
 
 dataframe = pd.read_csv('produksi_minyak_mentah.csv')
 dataframe['produksi'] = pd.to_numeric(dataframe['produksi'])
@@ -170,7 +178,7 @@ for t in tahun:
     zero_prod = min([p for p in produksi if p == 0])
 # maksimum
     kode_negara = df_per_tahun[df_per_tahun['produksi']==maks_prod]
-    ['kode_negara'].tolist()[0]
+['kode_negara'].tolist()[0]
 if kode_negara == 'WLD':
     kode_negara = 'WLF'
 dic_maks['negara'].append(jison_f[jison_f['alpha-3']==kode_negara]['name'].tolist()[0])
