@@ -63,6 +63,7 @@ ax.bar(unique_year, total_prod, color=warnawarna)
 
 left_col.pyplot(figure)
 
+left_col.subheader("Tabel Data Produksi Minyak Mentah Negara yang Dipilih")
 zasdsad = pd.DataFrame({
     'Tahun Unik':unique_year,
     'Produksi minyak mentah':total_prod
