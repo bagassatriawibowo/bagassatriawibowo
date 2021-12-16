@@ -59,13 +59,14 @@ figure, ax = plt.subplots()
 name_cmap = 'Pastel2'
 cimap = cm.get_cmap(name_cmap)
 warnawarna = cimap.colors[:len(cntry)]
-ax.bar(unique_year, total_prod, color=warnawarna)
+ax.bar(unique_year, total_prod, kode_negara, color=warnawarna)
 
 left_col.pyplot(figure)
 
 zasdsad = pd.DataFrame({
     'Tahun Unik':unique_year,
     'Produksi minyak mentah':total_prod
+    'Kode Negara' : kode_negara
 })
 st.table(zasdsad)
 ############### lower left column ###############
