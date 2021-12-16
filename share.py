@@ -97,7 +97,7 @@ ax.invert_yaxis()  # labels read top-to-bottom
 plt.tight_layout()
 
 mid_col.pyplot(figure)
-
+mid_col.subheader("Tabel Data Produksi Minyak Terbesar")
 zasdsadsa = pd.DataFrame({
     'Daftar Negara':negara_negara,
     'Produksi':sum_produksi
@@ -131,7 +131,7 @@ ax.bar(negara_negara2, total_prod, color=warnawarna)
 plt.tight_layout()
 
 right_col.pyplot(figure)
-
+mid_col.subheader("Tabel Data Produksi Kumulatif Minyak Terbesar")
 zasdsads = pd.DataFrame({
     'Daftar Negara':negara_negara2,
     'Produksi Kumulatif':total_prod
@@ -143,5 +143,5 @@ max_total_produksi = np.asarray(total_prod).max()
 max_total_produksi_idx = np.asarray(total_prod).argmax()
 max_produksi=np.asarray(sum_produksi).max()
 max_produksi_idx = np.asarray(sum_produksi).argmax()
-right_col.markdown(f"Negara dengan total produksi terbanyak yakni : {negara_negara2[max_total_produksi_idx]} ({max_total_produksi}) dan pada tahun {tahun} produksi terbanyaknya yakni :{negara_negara[max_produksi_idx]} ({max_produksi})")
+left_col.markdown(f"Negara dengan total produksi terbanyak yakni : {negara_negara2[max_total_produksi_idx]} ({max_total_produksi}) dan pada tahun {tahun} produksi terbanyaknya yakni :{negara_negara[max_produksi_idx]} ({max_produksi})")
 
