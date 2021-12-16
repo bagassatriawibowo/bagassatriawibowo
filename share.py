@@ -49,7 +49,7 @@ unique_year = list(dataframe['tahun'].unique())
 tahun = st.sidebar.selectbox ("Tahun", unique_year)
 
 ############### lower left column ###############
-left_col.subheader("Produksi Minyak Mentah Negara:{(cntry)} ")
+left_col.subheader("Produksi Minyak Mentah Negara",cntry)
 
 total_prod=[]
 for s in dataframe[dataframe['nama_negara']==negara]['produksi'] :
