@@ -171,15 +171,16 @@ for t in tahun:
     zero_prod = min([p for p in produksi if p == 0])
 
 # maksimum
-kode_negara = df_per_tahun[df_per_tahun['produksi']==maks_prod]
-if kode_negara == 'WLD':
-    kode_negara = 'WLF'
-dic_maks['negara'].append(jison_f[jison_f['alpha-3']==kode_negara]['name'].tolist()[0])
-dic_maks['kode_negara'].append(kode_negara)
-dic_maks['region'].append(jison_f[jison_f['alpha-3']==kode_negara]['region'].tolist()[0])
-dic_maks['sub_region'].append(jison_f[jison_f['alpha-3']==kode_negara]['sub-region'].tolist()
+    kode_negara = df_per_tahun[df_per_tahun['produksi']==maks_prod]
+['kode_negara'].tolist()[0]
+    if kode_negara == 'WLD':
+        kode_negara = 'WLF'
+    dic_maks['negara'].append(jison_f[jison_f['alpha-3']==kode_negara]['name'].tolist()[0])
+    dic_maks['kode_negara'].append(kode_negara)
+    dic_maks['region'].append(jison_f[jison_f['alpha-3']==kode_negara]['region'].tolist()[0])
+    dic_maks['sub_region'].append(jison_f[jison_f['alpha-3']==kode_negara]['sub-region'].tolist()
 [0])
-dic_maks['produksi'].append(maks_prod)
+    dic_maks['produksi'].append(maks_prod)
     # minimum != 0
 kode_negara = df_per_tahun[df_per_tahun['produksi']==min_prod]
 if kode_negara == 'WLD':
