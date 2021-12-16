@@ -38,7 +38,7 @@ st.title("Informasi Seputar Data Produksi Minyak Mentah dari Berbagai Negara di 
 #JUDUL
 
 ############### sidebar ###############
-image = Image.open('Oildrop.png')
+image = Image.open('Statistikminyakdunia.png')
 st.sidebar.image(image)
 
 st.sidebar.title("Pengaturan")
