@@ -68,7 +68,7 @@ zasdsad = pd.DataFrame({
     'Tahun Unik':unique_year,
     'Produksi minyak mentah':total_prod
 })
-st.table(zasdsad)
+left_col.dataframe(zasdsad)
 ############### lower left column ###############
 
 ############### lower middle column ###############
