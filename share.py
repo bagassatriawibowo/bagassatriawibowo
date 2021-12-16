@@ -102,7 +102,7 @@ zasdsadsa = pd.DataFrame({
     'Daftar Negara':negara_negara,
     'Produksi':sum_produksi
 })
-st.table(zasdsadsa)
+mid_col.dataframe(zasdsadsa)
 ############### lower middle column ###############
 
 ############### lower right column ###############
@@ -136,9 +136,9 @@ zasdsads = pd.DataFrame({
     'Daftar Negara':negara_negara2,
     'Produksi Kumulatif':total_prod
 })
-st.table(zasdsads)
+right_col.dataframe(zasdsads)
 ############### lower right column ###############
-right_col.subheader("Summary")
+left_col.subheader("Summary")
 max_total_produksi = np.asarray(total_prod).max()
 max_total_produksi_idx = np.asarray(total_prod).argmax()
 max_produksi=np.asarray(sum_produksi).max()
