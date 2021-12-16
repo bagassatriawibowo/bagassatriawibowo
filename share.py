@@ -144,11 +144,10 @@ zasdsads = pd.DataFrame({
 right_col.dataframe(zasdsads)
 ############### right column ###############
 
-left_col.subheader("Summary")
+left_col.subheader("SUMMARY")
 for x in range(len(det)):
     if negara == det[x]['name']:
         index_negara = x
-
 st.header('Informasi Negara yang Anda Pilih')
 st.write('Nama Lengkap Negara: %s' % (det[index_negara]['name']))
 st.write('Kode alpha-2: %s' % (det[index_negara]['alpha-2']))
