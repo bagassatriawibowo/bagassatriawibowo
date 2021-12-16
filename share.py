@@ -138,14 +138,13 @@ zasdsads = pd.DataFrame({
 })
 right_col.dataframe(zasdsads)
 ############### lower right column ###############
-ch_ = csvHandler('produksi_minyak_mentah.csv')
-jh_ = jsonHandler('kode_negara_lengkap.json')
+
 st.write()
 st.write()
 st.header('Bagian D COKK')
 T_ = st.sidebar.number_input("Summary Tahun Produksi", min_value=1971, max_value=2015)
-df = ch_.dataFrame
-dfJ = jh_.dataFrame
+df = dataframe_.dataFrame
+dfJ = jison_f.dataFrame
 tahun = list(dict.fromkeys(df['tahun'].tolist()))
 dic_maks = {'negara':[],
             'kode_negara':[],
