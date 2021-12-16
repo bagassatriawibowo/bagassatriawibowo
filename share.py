@@ -157,11 +157,11 @@ st.write('Kode Negara: %s' % (det[index_negara]['country-code']))
 st.write('Region: %s' % (det[index_negara]['region']))
 st.write('Sub-Region: %s' % (det[index_negara]['sub-region']))
 st.header('Informasi Produksi Minyak Negara yang Anda Pilih')
-zasdsad = zasdsad.sort_values(by='Besarnya Produksi Minyak Mentah', ascending=False)
-datanonzero = zasdsad.loc[zasdsad['Besarnya Produksi Minyak Mentah'] > 0, 'Tahun Unik']
+zasdsad = zasdsad.sort_values(by='Produksi minyak mentah', ascending=False)
+datanonzero = zasdsad.loc[zasdsad['Produksi minyak mentah'] > 0, 'Tahun Unik']
 dat_terbesar = datanonzero.values[0]
 dat_terkecil = datanonzero.values[len(datanonzero)-1]
 st.write(f'Produksi Terbesar Terjadi pada Tahun: {dat_terbesar}')
 st.write(f'Produksi Terkecil Terjadi pada Tahun: {dat_terkecil}')
-sum_data = zasdsad['Besarnya Produksi Minyak Mentah'].sum()
+sum_data = zasdsad['Produksi minyak mentah'].sum()
 st.write(f'Produksi Kumulatif Keseluruhan Tahun dari Negara Ini yakni Sebesar: {sum_data:.2f}')
