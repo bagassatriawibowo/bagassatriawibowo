@@ -173,35 +173,35 @@ for t in tahun:
     kode_negara = df_per_tahun[df_per_tahun['produksi']==maks_prod]
 ['kode_negara'].tolist()[0]
 if kode_negara == 'WLD':
-        kode_negara = 'WLF'
-    dic_maks['negara'].append(dfJ[dfJ['alpha-3']==kode_negara]['name'].tolist()[0])
-    dic_maks['kode_negara'].append(kode_negara)
-    dic_maks['region'].append(dfJ[dfJ['alpha-3']==kode_negara]['region'].tolist()[0])
-    dic_maks['sub_region'].append(dfJ[dfJ['alpha-3']==kode_negara]['sub-region'].tolist()
+    kode_negara = 'WLF'
+dic_maks['negara'].append(dfJ[dfJ['alpha-3']==kode_negara]['name'].tolist()[0])
+dic_maks['kode_negara'].append(kode_negara)
+dic_maks['region'].append(dfJ[dfJ['alpha-3']==kode_negara]['region'].tolist()[0])
+dic_maks['sub_region'].append(dfJ[dfJ['alpha-3']==kode_negara]['sub-region'].tolist()
 [0])
-    dic_maks['produksi'].append(maks_prod)
+dic_maks['produksi'].append(maks_prod)
     # minimum != 0
-    kode_negara = df_per_tahun[df_per_tahun['produksi']==min_prod]
+kode_negara = df_per_tahun[df_per_tahun['produksi']==min_prod]
 ['kode_negara'].tolist()[0]
 if kode_negara == 'WLD':
-        kode_negara = 'WLF'
-    dic_min['negara'].append(dfJ[dfJ['alpha-3']==kode_negara]['name'].tolist()[0])
-    dic_min['kode_negara'].append(kode_negara)
-    dic_min['region'].append(dfJ[dfJ['alpha-3']==kode_negara]['region'].tolist()[0])
-    dic_min['sub_region'].append(dfJ[dfJ['alpha-3']==kode_negara]['sub-region'].tolist()
+    kode_negara = 'WLF'
+dic_min['negara'].append(dfJ[dfJ['alpha-3']==kode_negara]['name'].tolist()[0])
+dic_min['kode_negara'].append(kode_negara)
+dic_min['region'].append(dfJ[dfJ['alpha-3']==kode_negara]['region'].tolist()[0])
+dic_min['sub_region'].append(dfJ[dfJ['alpha-3']==kode_negara]['sub-region'].tolist()
 [0])
-    dic_min['produksi'].append(min_prod)
+dic_min['produksi'].append(min_prod)
     # zero == 0
-    kode_negara = df_per_tahun[df_per_tahun['produksi']==zero_prod]
+kode_negara = df_per_tahun[df_per_tahun['produksi']==zero_prod]
 ['kode_negara'].tolist()[0]
 if kode_negara == 'WLD':
-        kode_negara = 'WLF'
-    dic_zero['negara'].append(dfJ[dfJ['alpha-3']==kode_negara]['name'].tolist()[0])
-    dic_zero['kode_negara'].append(kode_negara)
-    dic_zero['region'].append(dfJ[dfJ['alpha-3']==kode_negara]['region'].tolist()[0])
-    dic_zero['sub_region'].append(dfJ[dfJ['alpha-3']==kode_negara]['sub-region'].tolist()
+    kode_negara = 'WLF'
+dic_zero['negara'].append(dfJ[dfJ['alpha-3']==kode_negara]['name'].tolist()[0])
+dic_zero['kode_negara'].append(kode_negara)
+dic_zero['region'].append(dfJ[dfJ['alpha-3']==kode_negara]['region'].tolist()[0])
+dic_zero['sub_region'].append(dfJ[dfJ['alpha-3']==kode_negara]['sub-region'].tolist()
 [0])
-    dic_zero['produksi'].append(zero_prod)
+dic_zero['produksi'].append(zero_prod)
     
 df_maks = pd.DataFrame(dic_maks)
 df_min = pd.DataFrame(dic_min)
