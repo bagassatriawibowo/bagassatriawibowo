@@ -148,7 +148,7 @@ max_total_produksi_idx = np.asarray(total_prod).argmax()
 max_produksi=np.asarray(sum_produksi).max()
 max_produksi_idx = np.asarray(sum_produksi).argmax()
 right_col.markdown(f"Negara dengan produksi kumulatif terbesar yakni : {negara_negara2[max_total_produksi_idx]} ({max_total_produksi})")
-mid_col.markdown(f"pada tahun {tahun} produksi terbanyaknya yakni :{negara_negara[max_produksi_idx]} ({max_produksi})")
+mid_col.markdown(f"Pada tahun {tahun} produksi minyak terbesarnya yakni :{negara_negara[max_produksi_idx]} ({max_produksi})")
 left_col.subheader("SUMMARY")
 for x in range(len(det)):
     if negara == det[x]['name']:
